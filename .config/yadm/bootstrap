@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# TODO:
+# - Move to /usr/bin/zsh
+
+# yadm setup
+cd "$HOME"
+echo "Initializing yadm submodules.."
+yadm submodule update --recursive --init
+
+# zsh setup
+pamac install zsh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
