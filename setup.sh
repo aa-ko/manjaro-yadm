@@ -4,13 +4,14 @@
 # 2019-11-11 1522
 # Aaron Korte <github@aaronkorte.xyz>
 
-# Install pamac
+# install pamac
 pacman -Syu pamac-gtk pamac-cli
 
-# yadm prerequisites
+# install yadm prerequisites
 pamac install git wget curl bash
 
-# Install and initialize yadm
+# install and initialize yadm
+# https://yadm.io/
 pamac install yadm
 cd "$HOME"
 yadm clone --bootstrap https://github.com/aa-ko/manjaro-yadm.git
