@@ -8,6 +8,9 @@ cd "$HOME"
 # echo "Initializing yadm submodules.."
 # yadm submodule update --recursive --init
 
+# delete obsolete GitHub readme
+rm README.md
+
 # zsh setup
 echo "Installing zsh and oh-my-zsh.."
 pamac install zsh
