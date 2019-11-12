@@ -5,14 +5,14 @@
 
 # yadm setup
 cd "$HOME"
-echo "Initializing yadm submodules.."
-yadm submodule update --recursive --init
+# echo "Initializing yadm submodules.."
+# yadm submodule update --recursive --init
 
 # zsh setup
 echo "Installing zsh and oh-my-zsh.."
 pamac install zsh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-chsh -s /usr/bin/zsh aako
+chsh -s $(which zsh) aako
 
 # install / update essentials
 pamac install telegram-desktop firefox
@@ -25,3 +25,25 @@ pamac install albert muparser
 
 # flameshot
 pamac install flameshot
+
+# programming
+pamac install visual-studio-code-bin
+pamac install dotnet-runtime dotnet-sdk
+#pamac install elixir
+# TODO: download and install jetbrains-toolbox from https://www.jetbrains.com/toolbox-app/ or build from AUR
+
+# syncthing
+pamac install syncthing syncthing-gtk
+
+# tools and misc.
+pamac install gparted
+pamac install teamspeak3
+pamac install thunderbird # TOOD: store Thunderbird config in yadm repo
+pamac install veracrypt
+pamac install libvirt virt-manager
+pamac install zenmap
+pamac install ipcalc
+
+# psd
+# overlayfs SHOULD be loaded automatically as a kernel module as soon as psd attempts the mount
+pamac install profile-sync-daemon
