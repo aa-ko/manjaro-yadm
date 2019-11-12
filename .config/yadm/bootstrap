@@ -14,6 +14,9 @@ rm README.md
 # yadm decryption
 echo "Attempting to decrypt confidential yadm files.."
 yadm decrypt
+chmod 400 .ssh/config
+chmod 400 .ssh/*.priv
+chmod 400 .ssh/*.pub
 
 # zsh setup
 echo "Installing zsh and oh-my-zsh.."
