@@ -29,8 +29,7 @@ echo "Installing packages.."
 pamac install telegram-desktop firefox keepass xdotool xsel albert muparser flameshot syncthing syncthing-gtk thunderbird
 
 # programming
-pamac install visual-studio-code-bin
-pamac install dotnet-runtime dotnet-sdk
+pamac install visual-studio-code-bin dotnet-runtime dotnet-sdk
 #pamac install elixir
 # TODO: download and install jetbrains-toolbox from https://www.jetbrains.com/toolbox-app/ or build from AUR ??
 
@@ -41,6 +40,6 @@ pamac install libvirt virt-manager
 # psd
 # overlayfs SHOULD be loaded automatically as a kernel module as soon as psd attempts the mount
 echo "Attempting to install, enable and start profile-sync-daemon.."
-pamac install profile-sync-daemon
+pamac build profile-sync-daemon
 systemctl --user enable psd
 systemctl --user start psd
