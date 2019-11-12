@@ -1,7 +1,7 @@
 # Manjaro yadm bootstrapper
 
 ## Standalone bootstrap command for a Manjaro XFCE install:
-`sh -c "$(wget https://github.com/aa-ko/manjaro-yadm/tree/master/.config/yadm/setup.sh)"`
+`sh -c "$(wget -O- https://raw.githubusercontent.com/aa-ko/manjaro-yadm/master/.config/yadm/setup.sh)"`
 
 ## Dependencies
 - sh
