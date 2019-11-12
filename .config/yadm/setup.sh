@@ -12,6 +12,6 @@ pamac install git wget curl bash
 
 # install and initialize yadm
 # https://yadm.io/
-pamac install yadm
+pamac build yadm
 cd "$HOME"
 yadm clone --bootstrap https://github.com/aa-ko/manjaro-yadm.git
