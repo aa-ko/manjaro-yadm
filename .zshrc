@@ -75,8 +75,13 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# configure dotnet environment
 export PATH=$PATH:$HOME/.dotnet/tools
 export DOTNET_ROOT="$(dirname $(which dotnet))"
+
+# configure rust environment
+export PATH=$PATH:$HOME/.cargo/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
