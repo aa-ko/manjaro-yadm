@@ -5,8 +5,10 @@
 
 ## Dependencies
 - sh
+- sudo
 - wget
 - pacman
+- xargs
 
 ## TODO
 - Test this in a new Manjaro install (created on 5.3.8-3)
