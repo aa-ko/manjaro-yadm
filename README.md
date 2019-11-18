@@ -12,4 +12,5 @@
 
 ## TODO
 - Test this in a new Manjaro install (created on 5.3.8-3)
-- Add Thunderbird account settings
+- Install & configure Evolution mail client and ditch Thunderbird afterwards
+	- Import Google contacts into Evolution ?
