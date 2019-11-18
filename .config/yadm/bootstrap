@@ -33,6 +33,11 @@ pamac install visual-studio-code-bin dotnet-runtime dotnet-sdk
 #pamac install elixir
 # TODO: download and install jetbrains-toolbox from https://www.jetbrains.com/toolbox-app/ or build from AUR ??
 
+# setup rustc
+# TODO: Download and call rustup installation script
+mkdir .oh-my-zsh/completions
+rustup completions zsh > ~/.oh-my-zsh/completions/_rustup
+
 # tools and misc.
 pamac install gparted teamspeak3 veracrypt veracrypt zenmap ipcalc
 pamac install libvirt virt-manager
