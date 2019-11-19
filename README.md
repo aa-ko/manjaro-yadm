@@ -17,3 +17,4 @@
 - Choose optional dependencies for pamac packages
 - Run pamac in unattended mode
 - Find a way to have to put in the password less often ?
+- Add Lyx installation and settings
