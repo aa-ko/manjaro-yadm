@@ -1,3 +1,5 @@
 .ssh/config
 .ssh/*.priv
 .ssh/*.pub
+.local/share/aako-sieve
+
