@@ -18,3 +18,4 @@
 - [ ] Run pamac in unattended mode
 - [ ] Find a way to have to put in the password less often ?
 - [ ] Add a LaTeX distribution installation and settings (Gummi, TexStudio)
+- [ ] Download, build and install KeePass plugins in bootstrap script
