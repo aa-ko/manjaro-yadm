@@ -23,3 +23,4 @@
   - [ ] Concept for automatic generation of ssh config file from KeePass
 - [ ] Install and activate VS Code plugins and themes
 - [ ] Install wireguard and pull client config from encrypted files.gpg
+- [ ] Install fuck and add alias to .zshrc

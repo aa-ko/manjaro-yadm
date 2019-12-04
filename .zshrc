@@ -104,3 +104,5 @@ export PATH=$PATH:$HOME/.cargo/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval $(thefuck --alias)
