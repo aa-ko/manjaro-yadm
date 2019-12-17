@@ -30,11 +30,11 @@ alert = #bd2c40
 [bar/aako-default]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -51,13 +51,16 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = MaterialIcons-Regular:pixelsize=10;1
+font-0 = fixed:pixelsize=11;1
+font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
+font-2 = MaterialIcons-Regular:pixelsize=14;1
 
-modules-left = battery cpu memory
-modules-center = date
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan eth temperature powermenu
+;modules-left = battery cpu memory
+;modules-center = date
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan eth temperature powermenu
+modules-left = battery/ac battery/internal battery/swap
+modules-center =
+modules-right =
 
 tray-position = right
 tray-padding = 2
@@ -254,75 +257,37 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery-internal]
+[module/battery/base]
+poll-interval = 5
 type = internal/battery
+
+format-charging =  <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging =  <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+[module/battery/ac]
+inherit = module/battery/ac
+battery = AC
+adapter = ADP1
+;full-at = 87
+
+[module/battery/internal]
+inherit = module/battery/base
 battery = BAT0
 adapter = ADP1
 full-at = 87
 
-poll-interval = 10
-
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
-
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
-
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
-
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
-
-[module/battery-swap]
-type = internal/battery
+[module/battery/swap]
+inherit = module/battery/base
 battery = BAT1
 adapter = ADP1
 full-at = 104
-
-poll-interval = 10
-
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
-
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
-
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
-
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
