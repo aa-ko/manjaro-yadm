@@ -58,10 +58,10 @@ font-2 = MaterialIcons-Regular:pixelsize=15;1
 
 ;modules-left =
 ;modules-center =
-;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan eth temperature powermenu
+;modules-right = xbacklight alsa pulseaudio xkeyboard wlan eth temperature powermenu
 modules-left = battery/ac battery/internal battery/swap cpu memory
 modules-center = date
-modules-right = filesystem
+modules-right = wlan filesystem
 
 tray-position = right
 tray-padding = 2
@@ -146,6 +146,24 @@ format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.default-underline}
 label = %gb_used%/%gb_total%
 
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected =  <label-connected>
+format-connected-underline = ${colors.default-underline}
+label-connected = %essid% %signal%%
+
+format-disconnected =  <label-disconnected>
+label-disconnected = no signal
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-foreground = ${colors.foreground-alt}
+
 [module/filesystem]
 type = internal/fs
 interval = 30
@@ -199,28 +217,6 @@ bar-empty-foreground = ${colors.foreground-alt}
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
-
-[module/wlan]
-type = internal/network
-interface = net1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
