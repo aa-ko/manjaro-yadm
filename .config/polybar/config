@@ -28,7 +28,7 @@ secondary = #e60053
 alert = #bd2c40
 default-underline = #455BA6
 
-[bar/aako-default]
+[bar/aako-top]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 30
