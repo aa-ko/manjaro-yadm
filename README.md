@@ -26,4 +26,5 @@
   - [ ] Setup network interface namespaces and force all traffic through wg
 - [ ] Install fuck and add alias to .zshrc
 - [ ] Install polybar
-  - [ ] Install required fonts and refresh font cache
+  - [ ] Install required fonts (ttf-material-icons) and refresh font cache
+  - [ ] Add 'Material Icons' to VS Code fonts
