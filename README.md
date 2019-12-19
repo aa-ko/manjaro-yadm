@@ -28,3 +28,5 @@
 - [ ] Install polybar
   - [ ] Install required fonts (ttf-material-icons) and refresh font cache
   - [ ] Add 'Material Icons' to VS Code fonts
+  - [ ] Test ethernet interface display
+  - [ ] Deploy different polybar configs per machine
