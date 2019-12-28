@@ -31,3 +31,6 @@
   - [ ] Test ethernet interface display
   - [ ] Deploy different polybar configs per machine
   - [ ] Create custom script to display Telegram notifications ([polybar-scripts](https://github.com/polybar/polybar-scripts))
+- [ ] Install Hexchat
+  - [ ] set colors and preferences
+  - [ ] Add Freenode and hackint channels
