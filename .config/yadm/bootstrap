@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# TODO:
-# - Move to /usr/bin/zsh ?
-
 # yadm setup
 cd "$HOME"
 # echo "Initializing yadm submodules.."
@@ -39,8 +36,7 @@ mkdir .oh-my-zsh/completions
 rustup completions zsh > ~/.oh-my-zsh/completions/_rustup
 
 # tools and misc.
-pamac install gparted teamspeak3 veracrypt veracrypt zenmap ipcalc
-pamac install libvirt virt-manager
+pamac install gparted teamspeak3 veracrypt veracrypt zenmap ipcalc libvirt virt-manager
 
 # psd
 # overlayfs SHOULD be loaded automatically as a kernel module as soon as psd attempts the mount
