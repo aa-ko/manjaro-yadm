@@ -15,4 +15,4 @@ for pid in $pids; do
     fi
 done
 echo 0
-exit 1
+exit 0
